@@ -1,12 +1,23 @@
-const sum = (a,b) => {
-    return a + b
+// we declare the function with the exact name "fromEuroToDollar"
+const fromEuroToDollar = function(valueInEuro){
+    // convert the given valueInEuro to dollars
+    let valueInDollar = valueInEuro * 1.206;
+    //return the dollar value
+    return valueInDollar;
 }
-console.log(sum(7,3))
 
-let oneEuroIs = {
-    "JPY": 156.5, // japan yen
-    "USD": 1.07, // us dollar
-    "GBP": 0.87, // british pound
-
-    
+const fromDollarToYen = function(valueInDollar){
+    // convert the given valueInEuro to dollars
+    let valueInYen = valueInDollar * 144.26;
+    //return the dollar value
+    return valueInYen;
 }
+
+const fromYenToPound = function(valueInYen){
+    // convert the given valueInEuro to dollars
+    let valueInPound = valueInYen * 0.0055;
+    //return the dollar value
+    return valueInPound;
+}
+
+module.exports = { fromEuroToDollar , fromDollarToYen , fromYenToPound}
